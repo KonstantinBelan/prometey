@@ -1,0 +1,175 @@
+@use '../abstracts' as *;
+@use 'sass:color';
+
+// Base typography
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-base;
+  color: $gray-900;
+}
+
+// Headings
+h1,
+.h1 {
+  @include heading($font-size-4xl, $font-weight-bold, $line-height-relaxed);
+  margin-bottom: $spacing-lg;
+
+  @include respond-to('md') {
+    font-size: $font-size-4xl * 2;
+  }
+}
+
+h2,
+.h2 {
+  @include heading($font-size-3xl, $font-weight-bold, $line-height-tight);
+  margin-bottom: $spacing-md;
+
+  @include respond-to('md') {
+    font-size: $font-size-3xl * 1.1;
+  }
+}
+
+h3,
+.h3 {
+  @include heading($font-size-2xl, $font-weight-semibold, $line-height-tight);
+  margin-bottom: $spacing-sm;
+}
+
+h4,
+.h4 {
+  @include heading($font-size-xl, $font-weight-semibold, $line-height-tight);
+  margin-bottom: $spacing-sm;
+}
+
+h5,
+.h5 {
+  @include heading($font-size-lg, $font-weight-medium, $line-height-tight);
+  margin-bottom: $spacing-xs;
+}
+
+h6,
+.h6 {
+  @include heading($font-size-base, $font-weight-medium, $line-height-tight);
+  margin-bottom: $spacing-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Paragraphs
+p {
+  margin-bottom: $spacing-md;
+  letter-spacing: -0.03em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Links
+a {
+  color: $light-color;
+  text-decoration: none;
+  transition: $transition-base;
+
+  @include hover {
+    color: color.scale($primary-color, $lightness: -10%);
+    // text-decoration: underline;
+  }
+
+  // &:focus {
+  //   @include focus-ring;
+  // }
+}
+
+// Text utilities
+.text-small {
+  font-size: $font-size-sm;
+}
+
+.text-large {
+  font-size: $font-size-lg;
+}
+
+.text-muted {
+  color: $gray-600;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-gradient {
+  @include text-gradient($primary-color, $accent-color);
+}
+
+// Lists
+ul,
+ol {
+  margin-bottom: $spacing-md;
+  padding-left: $spacing-lg;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-bottom: $spacing-xs;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: $spacing-lg 0;
+  padding: $spacing-lg;
+  border-left: 4px solid $primary-color;
+  background-color: $gray-100;
+  font-style: italic;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  cite {
+    display: block;
+    margin-top: $spacing-sm;
+    font-size: $font-size-sm;
+    font-style: normal;
+    color: $gray-600;
+  }
+}
+
+// Code
+code {
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  padding: $spacing-xs $spacing-sm;
+  background-color: $gray-100;
+  border-radius: $border-radius-sm;
+}
+
+pre {
+  margin-bottom: $spacing-md;
+  padding: $spacing-md;
+  background-color: $gray-900;
+  color: $light-color;
+  border-radius: $border-radius-lg;
+  overflow-x: auto;
+
+  code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+  }
+}
+
+// Selection
+::selection {
+  background-color: rgba($primary-color, 0.2);
+  // color: $gray-900;
+}

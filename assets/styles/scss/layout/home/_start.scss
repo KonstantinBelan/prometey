@@ -1,0 +1,62 @@
+@use '../../abstracts' as *;
+
+.start {
+  // background: url('../../images/start-before.jpg') top right no-repeat $dark-color;
+  // background-size: cover;
+
+  &__grid {
+    counter-reset: item 0;
+  }
+
+  &__item {
+    border-radius: rem(14);
+    padding: rem(42) rem(36) rem(80);
+    background: radial-gradient(170.25% 171.12% at 0% 0%, rgba(33, 32, 32, 0.703) 6.71%, rgba(15, 14, 14, 0.565) 45.12%);
+    backdrop-filter: blur(rem(12));
+    position: relative;
+    counter-increment: item 1;
+
+    &::before {
+      content: '0' counter(item);
+      position: absolute;
+      top: rem(20);
+      right: rem(20);
+      @include heading(2.8rem);
+      text-align: right;
+      opacity: .15;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-unit;
+  }
+
+  &__title {
+    p {
+      @include heading(2.1rem);
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    p {
+      font-size: $font-size-base * 1.05;
+      font-weight: 600;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: rem(-50);
+    right: rem(10);
+
+    img {
+      width: rem(160);
+      height: rem(160);
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use 'variables' as *;
+@use 'functions' as *;
+
+// Clearfix
+%clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Visually hidden
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+// Reset list
+%list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Container
+%container {
+  width: 100%;
+  // max-width: 1200px;
+  max-width: rem(1560);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $spacing-md;
+  padding-right: $spacing-md;
+}
+
+// Flex column
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Card base
+%card-base {
+  background: white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  padding: $spacing-lg;
+}
+
+// Transition base
+%transition-base {
+  transition: $transition-base;
+}
+
+// Truncate
+%text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

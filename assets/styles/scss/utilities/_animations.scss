@@ -1,0 +1,90 @@
+@use '../abstracts' as *;
+
+#noise {
+  background-image: url('../../images/noise.gif');
+  background-size: 150px;
+  opacity: 0.1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999;
+  pointer-events: none;
+}
+
+@keyframes symbols {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes fire {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityPulse {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes hero {
+  0% {
+    transform: rotateX(10deg) scale(0.9) translateY(240px);
+    opacity: 0.9;
+    filter: grayscale(1);
+  }
+
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+    opacity: 1;
+    filter: grayscale(0);
+  }
+}
+
+@keyframes herobg {
+  0% {
+    transform: scale(1.03) rotate(1deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(0);
+  }
+
+  100% {
+    transform: scale(1.03) rotate(1deg);
+  }
+}
+
+@keyframes button {
+  0% {
+    transform: translateX(rem(-200)) rotate(18deg);
+  }
+
+  100% {
+    transform: translateX(calc(100% + rem(400))) rotate(18deg);
+  }
+}

@@ -1,0 +1,34 @@
+// Абстракты (без генерации CSS)
+@use 'abstracts/index' as *;
+
+// Базовые стили
+@use 'base/reset' as *;
+@use 'base/root' as *;
+@use 'base/typography' as *;
+@use 'base/global' as *;
+
+// Компоненты макета
+@use 'layout/container' as *;
+@use 'layout/grid' as *;
+@use 'layout/header' as *;
+@use 'layout/footer' as *;
+@use 'layout/sidebar' as *;
+
+// Компоненты
+@use 'components/button' as *;
+@use 'components/card' as *;
+@use 'components/form' as *;
+@use 'components/nav' as *;
+@use 'components/hero' as *;
+@use 'components/slider' as *;
+@use 'components/accordion' as *;
+@use 'components/modal' as *;
+
+// Страницы
+@use 'pages/home' as *;
+// @use 'pages/about' as *;
+// @use 'pages/contacts' as *;
+
+// Утилиты (должны быть в конце для переопределения)
+@use 'utilities/helpers' as *;
+@use 'utilities/animations' as *;
