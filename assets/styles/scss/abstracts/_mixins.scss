@@ -2,6 +2,45 @@
 @use 'variables' as *;
 
 // Media queries
+@mixin respond($breakpoint) {
+  @if($breakpoint==big) {
+
+    @media (max-width: 1070px) {
+      @content
+    }
+  }
+
+  @if($breakpoint==max) {
+    @media (min-width: 1700px) {
+      @content
+    }
+  }
+
+  @if($breakpoint==big2) {
+    @media (min-width: 640px) {
+      @content
+    }
+  }
+
+  @if($breakpoint==medium) {
+    @media (max-width: 920px) {
+      @content
+    }
+  }
+
+  @if($breakpoint==small) {
+    @media (max-width: 640px) {
+      @content
+    }
+  }
+
+  @if($breakpoint==small2) {
+    @media (max-width: 390px) {
+      @content
+    }
+  }
+}
+
 @mixin respond-to($breakpoint) {
   @if map.has-key($breakpoints, $breakpoint) {
     @media (min-width: map.get($breakpoints, $breakpoint)) {

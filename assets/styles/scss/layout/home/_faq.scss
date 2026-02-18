@@ -1,0 +1,101 @@
+@use '../../abstracts' as *;
+
+.faq {
+  position: relative;
+  z-index: 2;
+
+  .section__description {
+    width: 100%;
+    max-width: rem(660);
+    text-align: center;
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: rem(1170);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(150deg, #ededed 0%, #fff 47.27%, #fff 100%);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: $dark-color;
+
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+
+    &[data-open='true'] {
+      [class*='__answer'] {
+        display: block;
+      }
+
+      [class*='__arrow'] {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    cursor: pointer;
+
+    p {
+      font-weight: 600;
+      font-size: var(--font-size-2xl);
+      line-height: 155%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(42);
+    min-width: rem(42);
+    height: rem(42);
+    border-radius: rem(90);
+    background: linear-gradient(225deg, #000 0%, #9d2d0c 76%, #d7772a 100%);
+    position: relative;
+    transform: rotate(180deg);
+    transition: transform 0.25s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(18);
+      height: rem(12);
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTgnIGhlaWdodD0nMTInIHZpZXdCb3g9JzAgMCAxOCAxMicgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNOSAwTDE4IDEySDBMOSAwWicgZmlsbD0nd2hpdGUnIC8+PC9zdmc+") center no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__answer {
+    display: none;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: rem(1000);
+    backface-visibility: hidden;
+
+    &.animating {
+      display: block;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: calc(var(--font-size-lg) * 1.1);
+      line-height: 155%;
+    }
+  }
+}

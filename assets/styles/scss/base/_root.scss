@@ -1,6 +1,11 @@
-@use '../abstracts/index' as *;
+@use '../abstracts/variables' as *;
 
 :root {
+  // Global 
+  --size-font-ratio: 1;
+  --size-spacing: 16px;
+  --screen: 1680;
+
   // Colors
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
@@ -28,13 +33,14 @@
   --font-family-mono: #{$font-family-mono};
 
   // Font sizes
-  --font-size-base: #{$font-size-base};
-  --font-size-sm: #{$font-size-sm};
-  --font-size-lg: #{$font-size-lg};
-  --font-size-xl: #{$font-size-xl};
-  --font-size-2xl: #{$font-size-2xl};
-  --font-size-3xl: #{$font-size-3xl};
-  --font-size-4xl: #{$font-size-4xl};
+  --font-size-base: calc(#{$font-size-base} * (var(--size-font-ratio)));
+  --font-size-sm: calc(#{$font-size-sm} * (var(--size-font-ratio)));
+  --font-size-lg: calc(#{$font-size-lg} * (var(--size-font-ratio)));
+  --font-size-xl: calc(#{$font-size-xl} * (var(--size-font-ratio)));
+  --font-size-2xl: calc(#{$font-size-2xl} * (var(--size-font-ratio)));
+  --font-size-3xl: calc(#{$font-size-3xl} * (var(--size-font-ratio)));
+  --font-size-4xl: calc(#{$font-size-4xl} * (var(--size-font-ratio)));
+  --font-size-5xl: calc(#{$font-size-5xl} * (var(--size-font-ratio)));
 
   // Spacing
   --spacing-unit: #{$spacing-unit};
@@ -75,6 +81,22 @@
   --z-index-modal: #{$z-index-modal};
   --z-index-popover: #{$z-index-popover};
   --z-index-tooltip: #{$z-index-tooltip};
+}
+
+@media screen and (max-width: 1070px) {
+  :root {
+    --size-font-ratio: 0.7;
+    --size-spacing: 24px;
+    // --screen: 1680;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  :root {
+    // --size-font-ratio: 1;
+    --size-spacing: 20px;
+    // --screen: 1680;
+  }
 }
 
 // Dark mode

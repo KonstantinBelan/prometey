@@ -1,0 +1,153 @@
+@use '../../abstracts' as *;
+
+.promotion {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    color: $dark-color;
+    margin-top: rem(62);
+
+    @media screen and (max-width: 970px) {
+      margin-top: rem(20);
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(46);
+    border-radius: rem(16);
+    padding: rem(32);
+    // background: linear-gradient(150deg, #ededed 0%, #fff 43.47%, #fff 100%);
+    // background: linear-gradient(141deg, #ededed 0%, #fff 43.47%, #fff 100%);
+    background: linear-gradient(110deg, #ededed 0%, #fff 43.47%, #fff 100%);
+
+    @media screen and (max-width: 970px) {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+    }
+  }
+
+  &__leftside {
+    padding: rem(24);
+  }
+
+  &__title {
+    p {
+      @include heading(rem(48));
+      color: #000000;
+      background: inherit;
+      background-clip: inherit;
+      -webkit-background-clip: inherit;
+      -webkit-text-fill-color: inherit;
+      margin-bottom: rem(12);
+
+      @media screen and (max-width: 970px) {
+        font-size: rem(36);
+        margin-bottom: rem(16);
+      }
+    }
+  }
+
+  &__description {
+    max-width: rem(460);
+
+    p {
+      font-size: rem(19);
+      font-weight: 600;
+      line-height: 155%;
+      letter-spacing: -0.03em;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+    padding: 0;
+    margin-top: rem(40);
+    margin-bottom: rem(40);
+    list-style: none;
+    // max-width: rem(620);
+
+
+    @media screen and (max-width: 970px) {
+      margin-top: rem(30);
+      margin-bottom: rem(30);
+    }
+
+    li {
+      padding: 0;
+      margin: 0;
+      font-size: rem(17);
+      font-weight: 500;
+      line-height: 155%;
+      letter-spacing: -0.03em;
+      background: #fff;
+      border-radius: rem(12);
+      padding: rem(16);
+      padding-left: rem(46);
+      position: relative;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: rem(19);
+        height: rem(24);
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNDgnIGhlaWdodD0nNjAnIHZpZXdCb3g9JzAgMCA0OCA2MCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMzUuNTk0IDE3LjIwODNDNDEuODQ1OSAyNC45MjAyIDQ4Ljk5NjIgMzQuMzY2NiA0Ni42MjUyIDQ0Ljk0ODZDNDYuMDMzNSA0Ny42NTIgNDQuODUzMyA1MC4xOTE3IDQzLjE2ODYgNTIuMzg3MkM0MS40ODE3IDU0LjU2MzYgMzkuMzUwNSA1Ni4zNTU3IDM2LjkxNyA1Ny42NDQxQzM0LjQ4MzQgNTguOTMyNSAzMS44MDMzIDU5LjY4NzggMjkuMDU1MSA1OS44NTk2QzI5LjA2MTkgNTkuODU1NCAyOS4wNjg3IDU5Ljg1MTIgMjkuMDc1NSA1OS44NDcxQzMwLjgzNDcgNTguNzY2NyAzMi4xNDE3IDU3LjA4MzcgMzIuNzUyNyA1NS4xMTEyQzMzLjM2NjEgNTMuMTMxMSAzMy4yMzYxIDUwLjk5NTIgMzIuMzg2OSA0OS4xMDQxQzMwLjEwMzMgNDQuMTEyNiAyNS42MzU5IDQwLjQ2ODcgMjMuNTM5NSAzNS4zNjQ5QzIxLjQ0MyA0MC40Njg3IDE2Ljk3NTYgNDQuMTEyNiAxNC42OTIgNDkuMTA0MUMxMy44NDMzIDUwLjk5MDggMTMuNzEwOSA1My4xMjIgMTQuMzE5NSA1NS4wOTkyQzE0LjkyODEgNTcuMDc2NCAxNi4yMzYxIDU4Ljc2NDIgMTcuOTk4OSA1OS44NDcxQzE1LjI3MjUgNTkuNjYxNyAxMi42MTY0IDU4LjkwMSAxMC4yMDUzIDU3LjYxNUM3Ljc5NDE3IDU2LjMyOSA1LjY4Mjc5IDU0LjU0NjkgNC4wMTAxNCA1Mi4zODZDMi4zMzk5MiA1MC4yMjA2IDEuMTY0MzIgNDcuNzE1NiAwLjU2NTk5MiA0NS4wNDcyQy0xLjM5MzE4IDM2LjQyNDQgMi4wMDEwNSAyOC4wNjQ4IDYuNjQzMTcgMjAuOTI1N0M2Ljg4MDI2IDIzLjUyMTMgOS43MzA0MSAzMi40NDggMTAuNzUzNyAzNC44NDM5QzExLjU5MDYgMzAuNjQ3MSA4LjQxODk2IDI2LjAzMDggMTIuODk1IDE2LjQ4MzJDMTcuOTk4OSA1LjU5Njc0IDIzLjM1MjMgMy4xNDQ2NiAzMS4yMjY0IDBDMjkuODE2MyA1LjYxNTQ2IDMxLjEwMTYgMTEuNTU1NCAzNC42OTU1IDE2LjA5NzdDMzQuOTk1IDE2LjQ1OTUgMzUuMjk0NSAxNi44MzUxIDM1LjU5NCAxNy4yMDgzWicgZmlsbD0nI0ZGQTAwMCcgLz48cGF0aCBkPSdNMzUuNTk0IDE3LjIwODNDNDEuODQ1OSAyNC45MjAyIDQ4Ljk5NjIgMzQuMzY2NiA0Ni42MjUyIDQ0Ljk0ODZDNDYuMDMzNSA0Ny42NTIgNDQuODUzMyA1MC4xOTE3IDQzLjE2ODYgNTIuMzg3MkM0MS40ODE3IDU0LjU2MzYgMzkuMzUwNSA1Ni4zNTU3IDM2LjkxNyA1Ny42NDQxQzM0LjQ4MzQgNTguOTMyNSAzMS44MDMzIDU5LjY4NzggMjkuMDU1MSA1OS44NTk2QzI5LjA2MTkgNTkuODU1NCAyOS4wNjg3IDU5Ljg1MTIgMjkuMDc1NSA1OS44NDcxQzMwLjgzNDcgNTguNzY2NyAzMi4xNDE3IDU3LjA4MzcgMzIuNzUyNyA1NS4xMTEyQzMzLjM2NjEgNTMuMTMxMSAzMy4yMzYxIDUwLjk5NTIgMzIuMzg2OSA0OS4xMDQxQzMwLjEwMzMgNDQuMTEyNiAyNS42MzU5IDQwLjQ2ODcgMjMuNTM5NSAzNS4zNjQ5QzIxLjQ0MyA0MC40Njg3IDE2Ljk3NTYgNDQuMTEyNiAxNC42OTIgNDkuMTA0MUMxMy44NDMzIDUwLjk5MDggMTMuNzEwOSA1My4xMjIgMTQuMzE5NSA1NS4wOTkyQzE0LjkyODEgNTcuMDc2NCAxNi4yMzYxIDU4Ljc2NDIgMTcuOTk4OSA1OS44NDcxQzE1LjI3MjUgNTkuNjYxNyAxMi42MTY0IDU4LjkwMSAxMC4yMDUzIDU3LjYxNUM3Ljc5NDE3IDU2LjMyOSA1LjY4Mjc5IDU0LjU0NjkgNC4wMTAxNCA1Mi4zODZDMi4zMzk5MiA1MC4yMjA2IDEuMTY0MzIgNDcuNzE1NiAwLjU2NTk5MiA0NS4wNDcyQy0xLjM5MzE4IDM2LjQyNDQgMi4wMDEwNSAyOC4wNjQ4IDYuNjQzMTcgMjAuOTI1N0M2Ljg4MDI2IDIzLjUyMTMgOS43MzA0MSAzMi40NDggMTAuNzUzNyAzNC44NDM5QzExLjU5MDYgMzAuNjQ3MSA4LjQxODk2IDI2LjAzMDggMTIuODk1IDE2LjQ4MzJDMTcuOTk4OSA1LjU5Njc0IDIzLjM1MjMgMy4xNDQ2NiAzMS4yMjY0IDBDMjkuODE2MyA1LjYxNTQ2IDMxLjEwMTYgMTEuNTU1NCAzNC42OTU1IDE2LjA5NzdDMzQuOTk1IDE2LjQ1OTUgMzUuMjk0NSAxNi44MzUxIDM1LjU5NCAxNy4yMDgzWicgZmlsbD0ndXJsKCNwYWludDBfbGluZWFyXzEyMl81NTgpJyAvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0ncGFpbnQwX2xpbmVhcl8xMjJfNTU4JyB4MT0nMjMuNTQ1MycgeTE9Jy04Ljk0MDdlLTA3JyB4Mj0nNTguMjA1MycgeTI9JzYxLjIwNTknIGdyYWRpZW50VW5pdHM9J3VzZXJTcGFjZU9uVXNlJz48c3RvcCBzdG9wLWNvbG9yPScjRTVBRTQwJyAvPjxzdG9wIG9mZnNldD0nMScgc3RvcC1jb2xvcj0nI0ZGMkYwMCcgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4=") center no-repeat;
+        background-size: rem(19);
+        position: absolute;
+        top: 50%;
+        left: rem(16);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    a,
+    button {
+      width: 100%;
+    }
+  }
+
+  &__rightside {}
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-radius: rem(16);
+
+    span {
+      font-family: $font-family-heading;
+      font-size: rem(70);
+      line-height: 115%;
+      text-transform: uppercase;
+      color: #fff;
+      position: absolute;
+      top: rem(24);
+      right: rem(24);
+      z-index: 2;
+
+    }
+
+    img {
+      width: auto;
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+}

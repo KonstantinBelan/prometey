@@ -6,6 +6,12 @@
 
   &__grid {
     counter-reset: item 0;
+
+    @media screen and (max-width: 970px) {
+      display: flex;
+      flex-direction: column;
+      gap: rem(12);
+    }
   }
 
   &__item {
@@ -16,6 +22,13 @@
     position: relative;
     counter-increment: item 1;
 
+    @media screen and (max-width: 970px) {
+      display: flex;
+      align-items: center;
+      padding: rem(42);
+      padding-right: rem(200);
+    }
+
     &::before {
       content: '0' counter(item);
       position: absolute;
@@ -24,6 +37,10 @@
       @include heading(2.8rem);
       text-align: right;
       opacity: .15;
+
+      @media screen and (max-width: 970px) {
+        display: none;
+      }
     }
   }
 
@@ -31,19 +48,23 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: $spacing-unit;
+    gap: rem(16);
   }
 
   &__title {
     p {
-      @include heading(2.1rem);
+      @include heading(rem(34));
       margin-bottom: 0;
+
+      @media screen and (max-width: 970px) {
+        font-size: rem(30);
+      }
     }
   }
 
   &__description {
     p {
-      font-size: $font-size-base * 1.05;
+      font-size: calc(var(--font-size-base) * 1.05);
       font-weight: 600;
     }
   }
@@ -53,10 +74,20 @@
     bottom: rem(-50);
     right: rem(10);
 
+    @media screen and (max-width: 970px) {
+      bottom: auto;
+      right: rem(20);
+    }
+
     img {
       width: rem(160);
       height: rem(160);
       pointer-events: none;
+
+      @media screen and (max-width: 970px) {
+        width: rem(140);
+        height: rem(140);
+      }
     }
   }
 }

@@ -1,4 +1,5 @@
-@use 'variables' as *;
+// @use 'variables' as *;
+// @use '../base/root' as *;
 
 // Convert px to rem
 @function rem($pixels) {
@@ -6,7 +7,12 @@
     $pixels: $pixels * 1px;
   }
 
-  @return calc($pixels / 16px * 1rem);
+  // @return calc($pixels / 16px * 1rem);
+  @return calc($pixels / var(--size-spacing) * 1rem);
+}
+
+@function px($px, $viewport: var(--screen)) {
+  @return (calc($px * 100vw / $viewport));
 }
 
 // Convert px to em

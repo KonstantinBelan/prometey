@@ -1,0 +1,137 @@
+@use '../abstracts' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: rem(42);
+
+  &__input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: rem(490);
+
+    input {
+      border: none;
+      outline: none;
+      background: none;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(229, 229, 229, 0.24);
+      padding: rem(16) rem(12);
+      color: $light-color;
+      width: 100%;
+      transition: border-color 0.3s ease-in-out;
+
+      &:hover {
+        border-color: rgba(229, 229, 229, 0.4);
+
+        &+span {
+          opacity: .4;
+        }
+      }
+
+      &:focus,
+      &.value-check {
+        border-color: rgba(229, 229, 229, 0.8);
+
+        &+span {
+          font-size: 80%;
+          left: 0;
+          top: rem(-14);
+          opacity: .4;
+        }
+      }
+    }
+
+    span {
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: 155%;
+      letter-spacing: -0.03em;
+      opacity: .6;
+      position: absolute;
+      left: rem(12);
+      transition: font-size 0.3s ease-in-out, top 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+      pointer-events: none;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    gap: rem(14);
+
+    @media screen and (max-width: 970px) {
+      flex-direction: column;
+      gap: rem(16);
+    }
+
+    button,
+    input.submit {
+      width: 100%;
+      max-width: rem(490);
+
+      @media screen and (max-width: 970px) {
+        max-width: 100%;
+      }
+    }
+
+    button,
+    input.submit,
+    a.button {
+      font-size: var(--font-size-lg);
+    }
+
+    a.button {
+      @media screen and (max-width: 970px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__conf {
+
+    &-checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(24);
+      height: rem(24);
+      border: 2.5px solid #fff;
+      border-radius: 3px;
+      position: absolute;
+      top: rem(-2);
+      left: 0;
+      pointer-events: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: rem(14);
+        height: rem(13);
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTEnIGhlaWdodD0nMTAnIHZpZXdCb3g9JzAgMCAxMSAxMCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMC45Mzc1MzEgNS4zMTI1TDQuMTUzMiA3Ljk5MjIzQzQuNDM4NjIgOC4yMzAwNyA0Ljg2NzI2IDguMTY3OSA1LjA3MzM1IDcuODU4NzdMOS42ODc1MyAwLjkzNzUnIHN0cm9rZT0nd2hpdGUnIHN0cm9rZS13aWR0aD0nMS44NzUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgLz48L3N2Zz4=") center no-repeat;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+    }
+
+    input {
+      &:checked+label>.form__conf-checkbox::after {
+        opacity: 1;
+      }
+    }
+
+    label {
+      position: relative;
+      padding-left: rem(38);
+      cursor: pointer;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

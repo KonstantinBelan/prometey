@@ -39,6 +39,10 @@
   margin-right: auto;
   padding-left: $spacing-md;
   padding-right: $spacing-md;
+
+  @media screen and (max-width: 970px) {
+    max-width: rem(720);
+  }
 }
 
 // Flex column

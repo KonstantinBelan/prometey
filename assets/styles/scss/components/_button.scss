@@ -1,11 +1,12 @@
 @use '../abstracts' as *;
 
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: rem(240);
   border-radius: rem(12);
+  font-size: rem(17);
   padding: 0 rem(50);
   height: rem(80);
   position: relative;
@@ -14,6 +15,14 @@
 
   font-weight: $font-weight-bold;
   letter-spacing: -0.015em;
+
+  @media screen and (max-width: 970px) {
+    font-size: rem(16);
+    height: rem(70);
+    min-width: rem(200);
+    padding-left: rem(32);
+    padding-right: rem(32);
+  }
 
   @include hover {
     color: inherit;
@@ -42,6 +51,57 @@
 
       &::before {
         opacity: 1;
+      }
+    }
+  }
+
+  &--blur {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: rem(12);
+    padding: 0 rem(32);
+    backdrop-filter: blur(rem(62));
+    background: rgba(255, 255, 255, 0.06);
+    transition: border-color 0.2s ease-in-out;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--black {
+    background: url('../../images/button-black.jpg') center no-repeat;
+    background-size: cover;
+    color: $light-color !important;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('../../images/button-black.jpg') center no-repeat;
+      background-size: cover;
+      transform: scale(-1, 1);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      transition: opacity 0.35s ease-in-out;
+      opacity: 0;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &>.button--animate {
+      &::before {
+        opacity: .1;
       }
     }
   }
@@ -83,6 +143,14 @@
 
       will-change: transform;
       backface-visibility: hidden;
+    }
+  }
+
+  &--small {
+    height: rem(70);
+
+    @media screen and (max-width: 970px) {
+      height: rem(55);
     }
   }
 }

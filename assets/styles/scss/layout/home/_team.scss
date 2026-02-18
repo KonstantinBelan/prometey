@@ -1,0 +1,116 @@
+@use '../../abstracts' as *;
+
+.team {
+
+  &__wrapper {
+    overflow: visible !important;
+    padding-bottom: rem(45) !important;
+
+    .swiper-scrollbar {
+      bottom: 0 !important;
+      background: rgba(255, 255, 255, 0.2);
+
+      .swiper-scrollbar-drag {
+        background: $light-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__grid {}
+
+  &__item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: rem(490) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1rem;
+    padding: rem(24) rem(32);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @media (hover:hover) {
+      &:hover {
+        [class*='-image'] {
+          &::before {
+            opacity: 0;
+          }
+
+          img {
+            // filter: grayscale(0.2);
+          }
+        }
+      }
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: rem(10) rem(14) rem(6);
+      backdrop-filter: blur(rem(6));
+      background: rgba(0, 0, 0, 0.8);
+      background-clip: inherit;
+      -webkit-background-clip: inherit;
+      -webkit-text-fill-color: inherit;
+      margin: 0;
+    }
+
+    p {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: rem(6) rem(12);
+      backdrop-filter: blur(rem(12));
+      background: rgba(255, 255, 255, 0.8);
+      color: $dark-color;
+    }
+
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &::after {
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 43.4%);
+      }
+
+      &::before {
+        background: url('../../images/experience-after.jpg') center no-repeat;
+        background-size: cover;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        mix-blend-mode: exclusion;
+        z-index: 2;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      img {
+        width: auto;
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1);
+        transition: filter 0.2s ease-in-out;
+      }
+    }
+  }
+}

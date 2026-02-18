@@ -13,6 +13,19 @@
   pointer-events: none;
 }
 
+#bg {
+  background: #000;
+  opacity: 0.1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999999;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
 @keyframes symbols {
   0% {
     opacity: 0.2;
@@ -86,5 +99,43 @@
 
   100% {
     transform: translateX(calc(100% + rem(400))) rotate(18deg);
+  }
+}
+
+@keyframes symbol {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes experience {
+  0% {
+    opacity: .4;
+  }
+
+  50% {
+    opacity: .7;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes end {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

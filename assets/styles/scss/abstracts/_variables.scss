@@ -1,5 +1,7 @@
+@use '../abstracts/functions' as *;
+
 @import url('https://fonts.cdnfonts.com/css/buran-ussr');
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
 
 // Colors
 $primary-color: #EF7F28;
@@ -28,12 +30,13 @@ $font-family-heading: 'Buran USSR', $font-family-base;
 $font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
 $font-size-base: 1rem;
-$font-size-sm: $font-size-base * 0.875;
-$font-size-lg: $font-size-base * 1.125;
-$font-size-xl: $font-size-base * 1.25;
-$font-size-2xl: $font-size-base * 1.5;
-$font-size-3xl: $font-size-base * 1.875;
-$font-size-4xl: $font-size-base * 2.25;
+$font-size-sm: calc($font-size-base * 0.875);
+$font-size-lg: calc($font-size-base * 1.125);
+$font-size-xl: calc($font-size-base * 1.25);
+$font-size-2xl: calc($font-size-base * 1.5);
+$font-size-3xl: calc($font-size-base * 1.875);
+$font-size-4xl: calc($font-size-base * 2.25);
+$font-size-5xl: calc($font-size-base * 2.875);
 
 $font-weight-normal: 400;
 $font-weight-medium: 500;

@@ -9,6 +9,11 @@
   // background-size: cover;
 
   position: relative;
+
+  @media screen and (max-width: 970px) {
+    height: rem(690);
+  }
+
   // z-index: 1;
 
   // &::before {
@@ -50,7 +55,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: $spacing-xl;
+    gap: rem(32);
     width: 100%;
     max-width: rem(920);
     margin-left: auto;
@@ -59,6 +64,11 @@
 
     position: relative;
     z-index: 1;
+
+    @media screen and (max-width: 970px) {
+      margin-bottom: 0;
+      gap: rem(24);
+    }
 
     &::after {
       content: '';
@@ -78,11 +88,19 @@
 
       will-change: transform, opacity, filter;
       backface-visibility: hidden;
+
+      @media screen and (max-width: 970px) {
+        height: rem(600);
+      }
     }
   }
 
   &__title {
     text-align: center;
+
+    @media screen and (max-width: 970px) {
+      max-width: rem(620);
+    }
 
     h1 {
       margin-bottom: 0;
@@ -99,6 +117,11 @@
 
         will-change: opacity;
         backface-visibility: hidden;
+
+        @media screen and (max-width: 970px) {
+          width: rem(32);
+          height: rem(40);
+        }
       }
     }
   }
@@ -106,14 +129,14 @@
   &__description {
     display: flex;
     align-items: center;
-    gap: $spacing-lg;
+    gap: rem(20);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: rem(16);
 
     &::before,
     &::after {
       content: '';
-      font-size: $font-size-2xl / 1.2;
+      font-size: var(--font-size-2xl) / 1.2;
       color: $light-color;
       opacity: 0.2;
 
@@ -132,7 +155,7 @@
     }
 
     p {
-      font-size: $font-size-2xl / 1.2;
+      font-size: calc(var(--font-size-2xl) * 0.85);
     }
   }
 
@@ -151,6 +174,11 @@
     background: url('../../images/hero-before.png') center no-repeat;
     background-size: cover;
     pointer-events: none;
+
+    @media screen and (max-width: 970px) {
+      width: rem(200);
+      background-size: contain;
+    }
   }
 
   &__background {
@@ -163,10 +191,14 @@
     z-index: -2;
     pointer-events: none;
     background: url('../../images/hero-background.jpg') top center no-repeat;
-    background-size: cover;
+    background-size: contain;
     animation: herobg 10s linear infinite;
 
     will-change: transform;
     backface-visibility: hidden;
+
+    @media screen and (max-width: 970px) {
+      background-size: cover;
+    }
   }
 }

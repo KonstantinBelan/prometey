@@ -276,13 +276,105 @@ $spacing-sizes: (
 }
 
 .pt {
+  &--60 {
+    padding-top: rem(60);
+
+    @media screen and (max-width: 970px) {
+      padding-top: rem(50);
+    }
+  }
+
+  &--100 {
+    padding-top: rem(100);
+
+    @media screen and (max-width: 970px) {
+      padding-top: rem(80);
+    }
+  }
+
   &--120 {
     padding-top: rem(120);
+
+    @media screen and (max-width: 970px) {
+      padding-top: rem(90);
+    }
   }
 }
 
 .pb {
+  &--60 {
+    padding-bottom: rem(60);
+
+    @media screen and (max-width: 970px) {
+      padding-bottom: rem(50);
+    }
+  }
+
+  &--100 {
+    padding-bottom: rem(100);
+
+    @media screen and (max-width: 970px) {
+      padding-bottom: rem(80);
+    }
+  }
+
   &--120 {
     padding-bottom: rem(120);
+
+    @media screen and (max-width: 970px) {
+      padding-bottom: rem(90);
+    }
+  }
+}
+
+.mb {
+  &--60 {
+    margin-bottom: rem(60);
+  }
+
+  &--100 {
+    margin-bottom: rem(100);
+  }
+
+  &--120 {
+    margin-bottom: rem(120);
+  }
+}
+
+.max {
+  &-w {
+    &--500 {
+      max-width: rem(500);
+    }
+  }
+}
+
+.size {
+  &--20 {
+    // font-size: var(--font-size-lg) * 1;
+    font-size: calc(var(--font-size-lg) * 1.1);
+    // font-size: calc(var(--font-size-base) * 1.07);
+  }
+
+  &--32 {
+    font-size: calc(var(--font-size-4xl) * 0.9);
+  }
+
+  &--34 {
+    font-size: var(--font-size-4xl);
+  }
+
+  &--60 {
+    font-size: calc(var(--font-size-5xl) * 1.25);
+  }
+
+  &--64 {
+    font-size: calc(var(--font-size-5xl) * 1.4);
+  }
+}
+
+.weight {
+  &--600 {
+    font-weight: $font-weight-semibold;
   }
 }

@@ -1,0 +1,93 @@
+@use '../../abstracts' as *;
+
+.end {
+  height: rem(1070);
+  background: url('../../images/end-bg.jpg') top center no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  margin-top: rem(-60);
+  margin-bottom: rem(-110);
+
+  @media screen and (min-width:1920px) {
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 55vw;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 60%);
+    }
+
+    &::before {
+      width: 60vw;
+      left: 0;
+      background: linear-gradient(90deg, #000 35%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: rem(930);
+      height: rem(930);
+      background: url('../../images/end-bg-after.png') top center no-repeat;
+      background-size: cover;
+      border-radius: 100%;
+      z-index: -1;
+      animation: end 120s linear infinite;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: rem(24);
+  }
+
+  &__logo {
+    width: auto;
+    height: rem(76);
+
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+
+  &__info {
+    p {
+      background: linear-gradient(150deg, #e7e7e7 0%, #fff 47.27%, #dcdcdc 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use '../../abstracts' as *;
+
+.experience {
+
+  &__wrapper {}
+
+  &__grid {
+    @media screen and (max-width: 970px) {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+    border: 1px solid rgba(229, 229, 229, 0.12);
+    border-radius: 1rem;
+    padding: 2rem;
+    background: url('../../images/experience-after.jpg') center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../../images/experience-after.jpg') center no-repeat;
+      background-size: cover;
+      transform: rotate(180deg);
+      mix-blend-mode: exclusion;
+      opacity: 0.4;
+      animation: experience 15s ease-in-out infinite;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+    }
+
+    span {
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      max-width: rem(240);
+      font-weight: 600;
+      line-height: 1.45;
+    }
+  }
+}
