@@ -14,7 +14,9 @@
     height: rem(690);
   }
 
-  @media screen and (max-width: 620px) {}
+  @media screen and (max-width: 620px) {
+    height: rem(620);
+  }
 
   // z-index: 1;
 

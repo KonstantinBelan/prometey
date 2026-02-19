@@ -79,6 +79,10 @@
     p {
       font-size: calc(var(--font-size-base) * 1.05);
       font-weight: 600;
+
+      @media screen and (max-width: 620px) {
+        font-size: rem(15);
+      }
     }
   }
 

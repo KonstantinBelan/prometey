@@ -12,6 +12,9 @@
     margin-top: rem(55);
     width: 100%;
 
+    @media screen and (max-width: 620px) {
+      gap: rem(46);
+    }
   }
 
   &__start {
@@ -32,6 +35,10 @@
     position: relative;
     z-index: 1;
     // overflow: hidden;
+
+    @media screen and (max-width: 620px) {
+      height: rem(45);
+    }
 
     &.is-dragging {
 
@@ -57,6 +64,10 @@
       // background: #fff;
       transition: width 0.2s ease-in-out;
 
+      @media screen and (max-width: 620px) {
+        top: rem(-55);
+      }
+
       img {
         position: absolute;
         bottom: 0;
@@ -66,6 +77,10 @@
         width: calc(0px + var(--width-line) / 3);
         height: auto;
         transition: width 0.2s ease-in-out;
+
+        @media screen and (max-width: 620px) {
+          max-width: rem(50);
+        }
       }
     }
   }
@@ -84,6 +99,10 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+
+    @media screen and (max-width: 620px) {
+      min-width: rem(60);
+    }
 
     &::after {
       content: '';
@@ -109,6 +128,10 @@
       border-radius: rem(90);
       cursor: pointer;
       z-index: 5;
+
+      @media screen and (max-width: 620px) {
+        width: rem(50);
+      }
     }
   }
 
@@ -169,7 +192,7 @@
       -webkit-text-fill-color: inherit;
 
       @media screen and (max-width: 620px) {
-        font-size: rem(32);
+        font-size: rem(24);
       }
     }
   }
@@ -202,7 +225,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('../../images/webp/bg-after.webp') center no-repeat;
+      background: url('../../images/bg-after.png') center no-repeat;
       background-size: cover;
       mix-blend-mode: luminosity;
       pointer-events: none;

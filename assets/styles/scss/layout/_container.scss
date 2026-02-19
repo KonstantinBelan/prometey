@@ -34,6 +34,10 @@
         p {
           font-size: calc(var(--font-size-base) * 1.2);
 
+          // @media screen and (max-width: 620px) {
+          //   font-size: rem(15);
+          // }
+
           span {
             &.symbol {
               padding-left: rem(10);

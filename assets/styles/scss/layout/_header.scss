@@ -9,6 +9,10 @@
   transition: padding 0.32s ease-in-out, transform 0.3s linear;
   opacity: 1;
 
+  @media screen and (max-width: 620px) {
+    top: rem(20);
+  }
+
   &.active {
     position: fixed;
     transform: translateY(-100%) !important;
@@ -88,7 +92,7 @@
         height: 100%;
         z-index: -1;
         pointer-events: none;
-        background: url('../../images/webp/bg-after.webp') 100% 60% no-repeat;
+        background: url('../../images/bg-after.png') 100% 60% no-repeat;
         background-size: cover;
         mix-blend-mode: luminosity;
         opacity: .3;
@@ -147,10 +151,11 @@
       @media screen and (max-width: 970px) {
         width: rem(42);
         height: rem(42);
+        border: none;
       }
 
       @media screen and (max-width: 620px) {
-        dth: rem(36);
+        width: rem(36);
         height: rem(36);
       }
     }

@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: rem(42);
 
+  @media screen and (max-width: 620px) {
+    gap: rem(24);
+  }
+
   &__input {
     display: flex;
     align-items: center;
@@ -17,6 +21,7 @@
       outline: none;
       background: none;
       border-radius: 0;
+      font-size: 1rem;
       border-bottom: 1px solid rgba(229, 229, 229, 0.24);
       padding: rem(16) rem(12);
       color: $light-color;
@@ -55,6 +60,10 @@
       transition: font-size 0.3s ease-in-out, top 0.2s ease-in-out,
         opacity 0.2s ease-in-out;
       pointer-events: none;
+
+      @media screen and (max-width: 620px) {
+        font-size: rem(16);
+      }
     }
   }
 
@@ -81,7 +90,7 @@
     button,
     input.submit,
     a.button {
-      font-size: var(--font-size-lg);
+      // font-size: var(--font-size-lg);
     }
 
     a.button {
@@ -125,9 +134,13 @@
     }
 
     label {
+      display: flex;
+      align-items: center;
       position: relative;
       padding-left: rem(38);
       cursor: pointer;
+      font-size: 1rem;
+      line-height: 1.15;
 
       a {
         text-decoration: underline;

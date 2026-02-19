@@ -56,6 +56,10 @@
       .section__description {
         font-size: rem(20);
         font-weight: 600;
+
+        @media screen and (max-width: 620px) {
+          font-size: rem(16);
+        }
       }
     }
   }

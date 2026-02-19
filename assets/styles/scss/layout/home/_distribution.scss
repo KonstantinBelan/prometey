@@ -132,6 +132,10 @@
       font-size: rem(20);
       font-weight: 600;
       letter-spacing: -0.03em;
+
+      @media screen and (max-width: 620px) {
+        font-size: rem(16);
+      }
     }
   }
 
@@ -209,6 +213,10 @@
           display: inline-block;
         }
 
+        @media screen and (max-width: 620px) {
+          font-size: rem(26);
+        }
+
         em {
           font-style: normal;
           background: linear-gradient(174deg, #d2310d 0%, #ff2f00 100%);
@@ -225,6 +233,10 @@
         font-weight: 500;
         line-height: 155%;
         letter-spacing: -0.03em;
+
+        @media screen and (max-width: 620px) {
+          font-size: rem(16);
+        }
       }
     }
   }

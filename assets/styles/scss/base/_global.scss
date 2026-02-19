@@ -389,7 +389,12 @@ $spacing-sizes: (
   &--20 {
     // font-size: var(--font-size-lg) * 1;
     font-size: calc(var(--font-size-lg) * 1.1);
+
     // font-size: calc(var(--font-size-base) * 1.07);
+    @media screen and (max-width: 620px) {
+      font-size: rem(15);
+    }
+
   }
 
   &--32 {

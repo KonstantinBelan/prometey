@@ -1,14 +1,34 @@
+@use 'sass:math';
 // @use 'variables' as *;
 // @use '../base/root' as *;
 
+$size-spacing: 16px;
+
+// @media screen and (max-width: 1070px) {
+//   $size-spacing: 24px;
+// }
+
+// @media screen and (max-width: 970px) {
+//   $size-spacing: 20px;
+// }
+
 // Convert px to rem
+// @function rem($pixels) {
+//   @if unitless($pixels) {
+//     $pixels: $pixels * 1px;
+//   }
+
+//   // @return calc($pixels / 16px * 1rem);
+//   // @return calc($pixels / var(--size-spacing) * 1rem);
+//   @return calc($pixels / var(--size-spacing) * 1rem);
+// }
+
 @function rem($pixels) {
   @if unitless($pixels) {
     $pixels: $pixels * 1px;
   }
 
-  // @return calc($pixels / 16px * 1rem);
-  @return calc($pixels / var(--size-spacing) * 1rem);
+  @return math.div($pixels, $size-spacing) * 1rem;
 }
 
 @function px($px, $viewport: var(--screen)) {

@@ -4,6 +4,14 @@
   padding-top: rem(80);
   padding-bottom: rem(80);
 
+  p,
+  span,
+  a {
+    @media screen and (max-width: 620px) {
+      font-size: rem(15);
+    }
+  }
+
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr auto;
@@ -27,6 +35,10 @@
     @media screen and (max-width: 970px) {
       width: 100%;
       align-items: center;
+    }
+
+    @media screen and (max-width: 620px) {
+      gap: rem(16);
     }
   }
 
@@ -79,9 +91,7 @@
   &__button {
     margin-top: auto;
 
-    @media screen and (max-width: 970px) {
-    
-    }
+    @media screen and (max-width: 970px) {}
   }
 
   &__socials {
