@@ -90,10 +90,10 @@
               <p>Дистрибуция музыки и продвижение независимых артистов</p>
             </div>
             <div class="hero__button">
-              <a href="#!" class="button button--white button--icon">
+              <button class="button button--white button--icon" data-modal-open="call">
                 Обсудить сотрудничество
                 <div class="button--animate"></div>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -217,10 +217,10 @@
               <p>Берём на себя техническую и&nbsp;организационную часть релиза, чтобы ваши&nbsp;треки были корректно размещены и&nbsp;доступны на платформах.</p>
             </div>
             <div class="distribution__button">
-              <a href="#!" class="button button--white">
+              <button data-modal-open="call" class="button button--white">
                 Узнать стоимость
                 <div class="button--animate"></div>
-              </a>
+              </button>
             </div>
           </div>
           <div class="distribution__rightside">
@@ -314,10 +314,10 @@
                   <li>Корректировка релизной стратегии по результатам первых недель</li>
                 </ul>
                 <div class="promotion__button">
-                  <a href="#!" class="button button--black">
+                  <button data-modal-open="call" class="button button--black">
                     Узнать стоимость
                     <div class="button--animate"></div>
-                  </a>
+                  </button>
                 </div>
               </div>
               <div class="promotion__rightside">
@@ -344,10 +344,10 @@
                   <li>Сбор и сегментация аудитории для дальнейших запусков</li>
                 </ul>
                 <div class="promotion__button">
-                  <a href="#!" class="button button--black">
+                  <button data-modal-open="call" class="button button--black">
                     Узнать стоимость
                     <div class="button--animate"></div>
-                  </a>
+                  </button>
                 </div>
               </div>
               <div class="promotion__rightside">
@@ -374,10 +374,10 @@
                   <li>Работа с охватом без привязки к «разовому эффекту»</li>
                 </ul>
                 <div class="promotion__button">
-                  <a href="#!" class="button button--black">
+                  <button data-modal-open="call" class="button button--black">
                     Узнать стоимость
                     <div class="button--animate"></div>
-                  </a>
+                  </button>
                 </div>
               </div>
               <div class="promotion__rightside">
@@ -404,10 +404,10 @@
                   <li>Анализ источников прослушиваний и их вклада в рост релиза</li>
                 </ul>
                 <div class="promotion__button">
-                  <a href="#!" class="button button--black">
+                  <button data-modal-open="call" class="button button--black">
                     Узнать стоимость
                     <div class="button--animate"></div>
-                  </a>
+                  </button>
                 </div>
               </div>
               <div class="promotion__rightside">
@@ -477,7 +477,7 @@
           </div>
         </div>
       </section>
-      <section class="go pt--100 pb--100">
+      <section class="go pt--100 pb--100" id="form">
         <div class="container">
           <div class="go__wrapper">
             <div class="section__header section__header--left">
@@ -917,13 +917,57 @@
       </div>
     </footer>
     <div id="footer-button">
-      <a href="#!" class="button button--white button--icon">
+      <button data-modal-open="call" class="button button--white button--icon">
         Обсудить сотрудничество
         <div class="button--animate"></div>
-      </a>
+      </button>
     </div>
     <div id="noise"></div>
     <div id="bg"></div>
+    <div id="modal" class="modal" data-modal-id="call">
+      <div class="modal__wrapper">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+          <div class="modal__title">
+            <p>Заказать звонок</p>
+          </div>
+          <div class="modal__description">
+            <p>Оставь заявку или напиши в Telegram — мы разберём твою ситуацию, ответим на вопросы и подскажем как сделать следующий шаг.</p>
+          </div>
+          <div class="modal__form">
+            <form action="" class="form">
+              <div class="form__input">
+                <input type="text" name="name" id="name" value="" placeholder="" required="" />
+                <span>Введите имя</span>
+              </div>
+              <div class="form__input">
+                <input type="tel" name="phone" id="phone" value="" placeholder="" required="" />
+                <span>Введите номер телефона</span>
+              </div>
+              <div class="form__submit">
+                <button class="button button--black button--icon">
+                  Жду звонка
+                  <div class="button--animate"></div>
+                </button>
+                <a href="#" target="_blank" class="button button--blur">
+                  Написать в Telegram
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 12px">
+                    <path d="M22.387 4.0268L3.17954 11.4335C1.86871 11.96 1.87629 12.6913 2.93904 13.0174L7.87038 14.5557L19.28 7.35697C19.8195 7.02872 20.3125 7.2053 19.9073 7.56497L10.6632 15.9077H10.661L10.6632 15.9088L10.323 20.9918C10.8214 20.9918 11.0413 20.7632 11.3208 20.4935L13.716 18.1643L18.6983 21.8444C19.617 22.3503 20.2767 22.0903 20.5053 20.994L23.7759 5.5803C24.1106 4.23805 23.2635 3.6303 22.387 4.0268Z" fill="white"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="form__conf">
+                <input type="checkbox" id="conf" name="id" required="" hidden="" checked="" class="value-check" />
+                <label for="conf">
+                  <div class="form__conf-checkbox"></div>
+                  <p>Нажимая на кнопку, Вы соглашаетесь <a href="#" target="_blank">с&nbsp;политикой конфиденциальности</a>.</p>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -931,5 +975,6 @@
     <script src="assets/js/accordeon.js"></script>
     <script src="assets/js/fixed.js"></script>
     <script src="assets/js/lazyload.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>
