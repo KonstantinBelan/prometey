@@ -143,3 +143,20 @@
     }
   }
 }
+
+#footer-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 99999;
+  position: fixed;
+  bottom: rem(15);
+  transform: translateY(50vh);
+  transition: transform 1.25s ease-in-out;
+  will-change: transform;
+  backface-visibility: hidden;
+
+  &.visible {
+    transform: translateY(0);
+  }
+}

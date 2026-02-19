@@ -40,6 +40,10 @@
         background-position: bottom !important;
         bottom: rem(-7) !important;
       }
+
+      @media screen and (max-width: 620px) {
+        height: rem(360) !important;
+      }
     }
 
     .section__header {

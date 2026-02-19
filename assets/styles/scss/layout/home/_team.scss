@@ -32,6 +32,10 @@
     z-index: 1;
     overflow: hidden;
 
+    @media screen and (max-width: 620px) {
+      height: rem(390) !important;
+    }
+
     @media (hover:hover) {
       &:hover {
         [class*='-image'] {
@@ -67,6 +71,10 @@
       backdrop-filter: blur(rem(12));
       background: rgba(255, 255, 255, 0.8);
       color: $dark-color;
+
+      @media screen and (max-width: 920px) {
+        font-size: rem(16);
+      }
     }
 
     &-image {

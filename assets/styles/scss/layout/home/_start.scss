@@ -72,6 +72,11 @@
       @media screen and (max-width: 970px) {
         font-size: rem(30);
       }
+
+      @media screen and (max-width: 620px) {
+        font-size: rem(24);
+        line-height: 1.15;
+      }
     }
   }
 

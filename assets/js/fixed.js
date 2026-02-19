@@ -30,6 +30,30 @@ document.addEventListener('DOMContentLoaded', function () {
   handleScroll()
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+  const footerButton = document.querySelector('#footer-button')
+
+  if (!footerButton) {
+    return
+  }
+
+  function handleScrollButton() {
+    const scrollPosition2 = window.scrollY || document.documentElement.scrollTop
+    const windowHeight2 = window.innerHeight
+    const documentHeight2 = document.documentElement.scrollHeight
+    const distanceToBottom2 = documentHeight2 - (scrollPosition2 + windowHeight2)
+
+    if (scrollPosition2 > 940 && distanceToBottom2 >= 200) {
+      footerButton.classList.add('visible')
+    } else {
+      footerButton.classList.remove('visible')
+    }
+  }
+
+  window.addEventListener('scroll', handleScrollButton)
+  handleScrollButton()
+})
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
