@@ -15,6 +15,7 @@
 @use 'layout/sidebar' as *;
 
 // Компоненты
+@use 'components/preloader' as *;
 @use 'components/button' as *;
 @use 'components/card' as *;
 @use 'components/form' as *;

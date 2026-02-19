@@ -14,6 +14,8 @@
     height: rem(690);
   }
 
+  @media screen and (max-width: 620px) {}
+
   // z-index: 1;
 
   // &::before {
@@ -48,6 +50,12 @@
     background-size: contain;
     mix-blend-mode: overlay;
     opacity: .25;
+
+    @media screen and (max-width: 620px) {
+      top: auto;
+      bottom: 20%;
+      width: 90vw;
+    }
   }
 
   &__wrapper {
@@ -68,6 +76,10 @@
     @media screen and (max-width: 970px) {
       margin-bottom: 0;
       gap: rem(24);
+    }
+
+    @media screen and (max-width: 620px) {
+      gap: rem(12);
     }
 
     &::after {
@@ -91,6 +103,10 @@
 
       @media screen and (max-width: 970px) {
         height: rem(600);
+      }
+
+      @media screen and (max-width: 620px) {
+        bottom: rem(10);
       }
     }
   }
@@ -179,6 +195,10 @@
       width: rem(200);
       background-size: contain;
     }
+
+    @media screen and (max-width: 620px) {
+      width: rem(100);
+    }
   }
 
   &__background {
@@ -199,6 +219,11 @@
 
     @media screen and (max-width: 970px) {
       background-size: cover;
+    }
+
+    @media screen and (max-width: 620px) {
+      bottom: 10%;
+      top: auto;
     }
   }
 }

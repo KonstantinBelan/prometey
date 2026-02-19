@@ -7,6 +7,10 @@
     align-items: center;
     gap: $spacing-xl;
 
+    @media screen and (max-width: 620px) {
+      gap: $spacing-xl * 0.6;
+    }
+
     &--center {
       text-align: center;
     }
@@ -66,4 +70,14 @@
       // font-size: var(--font-size-lg);
     }
   }
+}
+
+[data-src] {
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  will-change: opacity;
+}
+
+[data-src].is-loaded {
+  opacity: 1;
 }

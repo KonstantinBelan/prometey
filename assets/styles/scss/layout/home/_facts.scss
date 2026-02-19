@@ -21,6 +21,10 @@
     background: linear-gradient(150deg, #ededed 0%, #fff 47.27%, #fff 100%);
     color: #000000;
 
+    @media screen and (max-width: 620px) {
+      padding: rem(32);
+    }
+
     &-icon {
       display: flex;
       align-items: center;

@@ -1,7 +1,17 @@
 @use '../abstracts/functions' as *;
 
-@import url('https://fonts.cdnfonts.com/css/buran-ussr');
-@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+@font-face {
+  font-family: 'Buran USSR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  // src: local('Buran USSR'),
+  //   url('../../../assets/fonts/Buran-USSR.woff') format('woff');
+  src:
+    url('../../../assets/fonts/Buran-USSR.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap');
 
 // Colors
 $primary-color: #EF7F28;

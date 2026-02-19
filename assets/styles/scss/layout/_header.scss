@@ -115,6 +115,10 @@
       font-size: var(--font-size-base);
       margin-right: $spacing-md / 2;
 
+      @media screen and (max-width: 620px) {
+        display: none;
+      }
+
       &::before {
         display: inline-block;
         content: '';
@@ -126,6 +130,8 @@
         border-radius: 100%;
         background: $gradient-primary;
         animation: opacityPulse 2s ease-in-out infinite;
+        will-change: transform, opacity;
+        backface-visibility: hidden;
       }
     }
 
@@ -139,8 +145,13 @@
       border: rem(1) solid rgba($light-color, 0.12);
 
       @media screen and (max-width: 970px) {
-        width: rem(46);
-        height: rem(46);
+        width: rem(42);
+        height: rem(42);
+      }
+
+      @media screen and (max-width: 620px) {
+        dth: rem(36);
+        height: rem(36);
       }
     }
   }

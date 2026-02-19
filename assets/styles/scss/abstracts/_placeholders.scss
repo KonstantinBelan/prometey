@@ -43,6 +43,10 @@
   @media screen and (max-width: 970px) {
     max-width: rem(720);
   }
+
+  @media screen and (max-width: 620px) {
+    max-width: rem(460);
+  }
 }
 
 // Flex column

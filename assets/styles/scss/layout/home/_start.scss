@@ -29,6 +29,14 @@
       padding-right: rem(200);
     }
 
+    @media screen and (max-width: 620px) {
+      flex-direction: column-reverse;
+      gap: rem(24);
+      padding: rem(32);
+      padding-top: rem(24);
+      text-align: center;
+    }
+
     &::before {
       content: '0' counter(item);
       position: absolute;
@@ -49,6 +57,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: rem(16);
+
+    @media screen and (max-width: 620px) {
+      align-items: center;
+      gap: rem(10);
+    }
   }
 
   &__title {
@@ -77,6 +90,12 @@
     @media screen and (max-width: 970px) {
       bottom: auto;
       right: rem(20);
+    }
+
+    @media screen and (max-width: 620px) {
+      position: relative;
+      right: 0;
+      top: 0;
     }
 
     img {

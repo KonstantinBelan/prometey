@@ -24,6 +24,11 @@ h1,
   @media screen and (max-width: 970px) {
     font-size: calc(var(--font-size-4xl) * 1.5);
   }
+
+  @media screen and (max-width: 620px) {
+    font-size: calc(var(--font-size-4xl) * 1.25);
+    margin-bottom: $spacing-lg * 0.6;
+  }
 }
 
 h2,
@@ -34,6 +39,10 @@ h2,
 
   @include respond-to('md') {
     font-size: calc(var(--font-size-5xl) * 1.25);
+  }
+
+  @media screen and (max-width: 620px) {
+    font-size: calc(var(--font-size-5xl));
   }
 }
 

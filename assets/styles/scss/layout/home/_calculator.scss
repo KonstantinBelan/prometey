@@ -167,6 +167,10 @@
       background-clip: inherit;
       -webkit-background-clip: inherit;
       -webkit-text-fill-color: inherit;
+
+      @media screen and (max-width: 620px) {
+        font-size: rem(32);
+      }
     }
   }
 
@@ -210,6 +214,11 @@
   &__icon {
     width: rem(124);
     height: rem(124);
+
+    @media screen and (max-width: 620px) {
+      width: rem(92);
+      height: rem(92);
+    }
 
     img {
       width: auto;

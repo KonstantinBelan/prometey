@@ -3,11 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Prometey Music - Дистрибуция музыки и продвижение независимых артистов</title>
     <link rel="stylesheet" href="assets/styles/css/main.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="assets/js/preloader.js"></script>
   </head>
   <body>
+    <div id="preloader" class="preloader">
+      <div class="preloader__bg"></div>
+      <div class="preloader__content">
+        <div class="preloader__rings">
+          <div class="preloader__ring preloader__ring--1"></div>
+          <div class="preloader__ring preloader__ring--2"></div>
+          <div class="preloader__ring preloader__ring--3"></div>
+        </div>
+        <div class="preloader__equalizer">
+          <div class="preloader__bar" style="--i: 0"></div>
+          <div class="preloader__bar" style="--i: 1"></div>
+          <div class="preloader__bar" style="--i: 2"></div>
+          <div class="preloader__bar" style="--i: 3"></div>
+          <div class="preloader__bar" style="--i: 4"></div>
+          <div class="preloader__bar" style="--i: 5"></div>
+          <div class="preloader__bar" style="--i: 6"></div>
+          <div class="preloader__bar" style="--i: 7"></div>
+          <div class="preloader__bar" style="--i: 8"></div>
+        </div>
+        <div class="preloader__info">
+          <div class="preloader__logo">
+            <span class="preloader__logo-icon"></span>
+            <span class="preloader__logo-text">Prometey Music</span>
+          </div>
+          <div class="preloader__progress-wrap">
+            <div class="preloader__progress-bar">
+              <div class="preloader__progress-fill" id="preloaderProgress"></div>
+            </div>
+            <div class="preloader__progress-text">
+              <span class="preloader__status">Загружаем вайб</span>
+              <span class="preloader__percent" id="preloaderPercent">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preloader__notes">
+        <span class="preloader__note" style="--x: 15%; --delay: 0s; --dur: 4s">♪</span>
+        <span class="preloader__note" style="--x: 30%; --delay: 1.2s; --dur: 3.5s">♫</span>
+        <span class="preloader__note" style="--x: 50%; --delay: 0.5s; --dur: 5s">♩</span>
+        <span class="preloader__note" style="--x: 70%; --delay: 2s; --dur: 3.8s">♬</span>
+        <span class="preloader__note" style="--x: 85%; --delay: 0.8s; --dur: 4.5s">♪</span>
+        <span class="preloader__note" style="--x: 40%; --delay: 1.8s; --dur: 3.2s">♫</span>
+        <span class="preloader__note" style="--x: 60%; --delay: 2.5s; --dur: 4.2s">♩</span>
+        <span class="preloader__note" style="--x: 25%; --delay: 3s; --dur: 3.6s">♬</span>
+      </div>
+    </div>
     <header class="header fixed2">
       <div class="header__wrapper container">
         <div class="header__logo">
@@ -773,6 +820,9 @@
                 <p class="h1">Твоя музыка<br />заслуживает внимания</p>
               </div>
             </div>
+            <div class="end__bg">
+              <img data-src="assets/images/end-bg-after.png" width="auto" height="auto" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -879,5 +929,6 @@
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/accordeon.js"></script>
     <script src="assets/js/fixed.js"></script>
+    <script src="assets/js/lazyload.js"></script>
   </body>
 </html>

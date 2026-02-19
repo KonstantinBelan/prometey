@@ -282,6 +282,10 @@ $spacing-sizes: (
     @media screen and (max-width: 970px) {
       padding-top: rem(50);
     }
+
+    @media screen and (max-width: 620px) {
+      padding-top: rem(30);
+    }
   }
 
   &--100 {
@@ -290,6 +294,10 @@ $spacing-sizes: (
     @media screen and (max-width: 970px) {
       padding-top: rem(80);
     }
+
+    @media screen and (max-width: 620px) {
+      padding-top: rem(60);
+    }
   }
 
   &--120 {
@@ -297,6 +305,10 @@ $spacing-sizes: (
 
     @media screen and (max-width: 970px) {
       padding-top: rem(90);
+    }
+
+    @media screen and (max-width: 620px) {
+      padding-top: rem(70);
     }
   }
 }
@@ -308,6 +320,10 @@ $spacing-sizes: (
     @media screen and (max-width: 970px) {
       padding-bottom: rem(50);
     }
+
+    @media screen and (max-width: 620px) {
+      padding-bottom: rem(30);
+    }
   }
 
   &--100 {
@@ -315,6 +331,10 @@ $spacing-sizes: (
 
     @media screen and (max-width: 970px) {
       padding-bottom: rem(80);
+    }
+
+    @media screen and (max-width: 620px) {
+      padding-bottom: rem(60);
     }
   }
 
@@ -324,20 +344,36 @@ $spacing-sizes: (
     @media screen and (max-width: 970px) {
       padding-bottom: rem(90);
     }
+
+    @media screen and (max-width: 620px) {
+      padding-bottom: rem(70);
+    }
   }
 }
 
 .mb {
   &--60 {
     margin-bottom: rem(60);
+
+    @media screen and (max-width: 620px) {
+      margin-bottom: rem(30);
+    }
   }
 
   &--100 {
     margin-bottom: rem(100);
+
+    @media screen and (max-width: 620px) {
+      margin-bottom: rem(60);
+    }
   }
 
   &--120 {
     margin-bottom: rem(120);
+
+    @media screen and (max-width: 620px) {
+      margin-bottom: rem(70);
+    }
   }
 }
 
@@ -370,6 +406,10 @@ $spacing-sizes: (
 
   &--64 {
     font-size: calc(var(--font-size-5xl) * 1.4);
+
+    @media screen and (max-width: 620px) {
+      font-size: calc(var(--font-size-5xl) * 1);
+    }
   }
 }
 

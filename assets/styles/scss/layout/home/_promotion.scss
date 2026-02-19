@@ -31,6 +31,10 @@
       flex-direction: column;
       gap: rem(24);
     }
+
+    @media screen and (max-width: 620px) {
+      padding: rem(16);
+    }
   }
 
   &__leftside {

@@ -24,6 +24,10 @@
     padding-right: rem(32);
   }
 
+  @media screen and (max-width: 620px) {
+    font-size: rem(18);
+  }
+
   @include hover {
     color: inherit;
   }
