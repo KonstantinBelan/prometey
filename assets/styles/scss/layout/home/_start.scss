@@ -7,7 +7,7 @@
   &__grid {
     counter-reset: item 0;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: flex;
       flex-direction: column;
       gap: rem(12);
@@ -22,7 +22,7 @@
     position: relative;
     counter-increment: item 1;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: flex;
       align-items: center;
       padding: rem(42);
@@ -46,7 +46,7 @@
       text-align: right;
       opacity: .15;
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         display: none;
       }
     }
@@ -69,7 +69,7 @@
       @include heading(rem(34));
       margin-bottom: 0;
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         font-size: rem(30);
       }
 
@@ -96,7 +96,7 @@
     bottom: rem(-50);
     right: rem(10);
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       bottom: auto;
       right: rem(20);
     }
@@ -112,7 +112,7 @@
       height: rem(160);
       pointer-events: none;
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         width: rem(140);
         height: rem(140);
       }

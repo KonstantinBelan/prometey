@@ -5,7 +5,7 @@
   &__wrapper {}
 
   &__grid {
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: flex;
       flex-direction: column;
       gap: rem(8);
@@ -52,7 +52,7 @@
         -webkit-text-fill-color: inherit;
         line-height: 1.3;
 
-        @media screen and (max-width: 970px) {
+        @media screen and (max-width: 1025px) {
           br {
             display: none;
           }
@@ -64,14 +64,14 @@
       width: 100%;
       max-width: rem(360);
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         max-width: 100%;
       }
 
       p {
         font-size: calc(var(--font-size-base) * 1.07);
 
-        @media screen and (max-width: 970px) {
+        @media screen and (max-width: 1025px) {
           font-size: rem(17);
         }
       }

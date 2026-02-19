@@ -5,7 +5,7 @@
   &__wrapper {}
 
   &__grid {
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: flex;
       flex-direction: column;
       gap: rem(8);

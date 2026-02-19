@@ -17,7 +17,7 @@
     grid-template-columns: 1fr 1fr auto;
     gap: 1.5rem;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -32,7 +32,7 @@
     gap: 2rem;
     justify-content: space-between;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       width: 100%;
       align-items: center;
     }
@@ -62,7 +62,7 @@
     align-items: flex-start;
     height: 100%;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       width: 100%;
       align-items: center;
     }
@@ -81,7 +81,7 @@
     gap: rem(10);
     margin-bottom: rem(12);
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       flex-direction: row;
       margin-bottom: rem(42);
       gap: rem(24);
@@ -91,7 +91,7 @@
   &__button {
     margin-top: auto;
 
-    @media screen and (max-width: 970px) {}
+    @media screen and (max-width: 1025px) {}
   }
 
   &__socials {
@@ -100,7 +100,7 @@
     gap: rem(6);
     margin-bottom: rem(12);
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       margin-bottom: rem(42);
     }
 

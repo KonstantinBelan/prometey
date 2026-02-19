@@ -22,7 +22,7 @@
     grid-template-columns: 1fr auto;
     gap: rem(12);
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: flex;
       flex-direction: column;
     }
@@ -199,7 +199,7 @@
 
 
   &__footer {
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: flex;
       flex-direction: column;
       gap: rem(12);

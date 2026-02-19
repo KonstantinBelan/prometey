@@ -25,7 +25,7 @@
       align-items: center;
       justify-content: space-between;
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         flex-direction: column;
         gap: rem(12);
       }
@@ -64,7 +64,7 @@
       font-style: normal;
     }
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       text-align: center;
     }
   }

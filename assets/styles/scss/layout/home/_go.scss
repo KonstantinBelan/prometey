@@ -10,7 +10,7 @@
     position: relative;
     // overflow: hidden;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       padding-bottom: 0;
     }
 
@@ -31,7 +31,7 @@
       background-size: cover;
       pointer-events: none;
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         display: inline-flex !important;
         position: relative !important;
         width: 100% !important;
@@ -51,7 +51,7 @@
       width: 100%;
       max-width: rem(690);
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         justify-content: center;
         align-items: center;
         text-align: center;

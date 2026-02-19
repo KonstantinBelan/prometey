@@ -57,14 +57,14 @@
       height: rem(56);
       pointer-events: none;
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         height: rem(46);
       }
     }
   }
 
   &__nav {
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       display: none;
     }
 
@@ -148,7 +148,7 @@
       border-radius: rem(12);
       border: rem(1) solid rgba($light-color, 0.12);
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         width: rem(42);
         height: rem(42);
         border: none;

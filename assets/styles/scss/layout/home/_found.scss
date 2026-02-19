@@ -7,7 +7,7 @@
   position: relative;
   z-index: 1;
 
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1025px) {
     background-position: 80%;
     padding-top: rem(20) !important;
   }
@@ -55,7 +55,7 @@
     top: 0;
     left: 0;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       flex-wrap: wrap;
       align-items: flex-start;
       gap: rem(12);
@@ -93,7 +93,7 @@
         padding: rem(12) rem(20);
       }
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         position: relative;
         top: 0 !important;
         left: 0 !important;
@@ -216,7 +216,7 @@
     width: 100%;
     position: relative;
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 1025px) {
       margin-top: rem(-60);
     }
 
@@ -240,7 +240,7 @@
       mix-blend-mode: overlay;
       opacity: .4;
 
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 1025px) {
         width: 100%;
         background-size: contain;
         display: none;
